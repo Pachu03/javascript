@@ -1,7 +1,7 @@
 console.log("%cWellcome to the application", "color:blue");
 console.log("%cThis is an informational message.", "color:green");
 console.warn("This is a warning. Be cautions.");
-console.log("Errors! Sommething went wrong.");
+console.error("Errors! Sommething went wrong.");
 
 const NAME1 = "Jhon";
 const NAME2 = "Jane";
