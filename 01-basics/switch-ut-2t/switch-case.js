@@ -111,7 +111,7 @@ let calculatorObject = {
  *
  */
 export const simpleCalculatorObject = (operator, num_1, num_2) => {
-  switch (operator) {
+  /*switch (operator) {
     case "+":
       return num_1 + num_2;
     case "-":
@@ -122,5 +122,9 @@ export const simpleCalculatorObject = (operator, num_1, num_2) => {
       return num_1 / num_2;
     default:
       return DEFAULT_OPERARTOR_ERROR;
-  }
+  }*/
+
+  return calculatorObject[operator]
+    ? calculatorObject[operator](num_1, num_2)
+    : DEFAULT_OPERARTOR_ERROR;
 };
