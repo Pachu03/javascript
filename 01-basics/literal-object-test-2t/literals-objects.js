@@ -20,47 +20,63 @@ let person = {
  * Gets the country of person object
  * @returns the country of person object
  */
-export const getCountry = () => {};
+export const getCountry = () => {
+  return person.country;
+};
 
 /**
  * Gets the street of person object
  * @returns the street of person object
  */
-export const getStreet = () => {};
+export const getStreet = () => {
+  return person.address.street;
+};
 
 /**
  * Gets the age of person object via {@link person.getAge()} fuction
  * @returns the age of person object via {@link person.getAge()} fuction
  */
-export const getAgeViaFuction = () => {};
+export const getAgeViaFuction = () => {
+  return person.getAge();
+};
 
 /**
  * Gets the address number of person object
  * @returns the address number of person object
  */
-export const getNumbreAddress = () => {};
+export const getNumbreAddress = () => {
+  return person.address.number;
+};
 
 /**
  * Removes the address number of person object
  */
-export const removeNumbreAddressProperty = () => {};
+export const removeNumbreAddressProperty = () => {
+  return delete person.address.number;
+};
 
 /**
  * Adds the Spanish nacionality to person object as a new property
  */
-export const addSpanishNacionalityAsNewProperty = () => {};
+export const addSpanishNacionalityAsNewProperty = () => {
+  return (person.nacionalty = "Spanish");
+};
 
 /**
  * Gets the nacionality of person object
  * @returns the nacionality of person object
  */
-export const getNacionalty = () => {};
+export const getNacionalty = () => {
+  return person.nacionalty;
+};
 
 /**
  * Gets every person properties as array
  * @returns every person properties as array
  */
-export const getPersonArray = () => {};
+export const getPersonArray = () => {
+  return Object.entries(person);
+};
 
 /**************************************************/
 /***************Movie literal object***************/
@@ -108,46 +124,68 @@ let movie = {
  * Gets title of movie object
  * @returns birthday of diretor
  */
-export const getTitle = () => {};
+export const getTitle = () => {
+  return movie.title;
+};
 
 /**
  * Gets birthday of diretor
  * @returns birthday of diretor
  */
-export const getBirthdayOfDirector = () => {};
+export const getBirthdayOfDirector = () => {
+  return movie.director.birth.date;
+};
 
 /**
  * Gets the last principal film of director
  * @returns the last principal films of director
  */
-export const getLastPrincipalOfDirector = () => {};
+export const getLastPrincipalOfDirector = () => {
+  return movie.director.notableFilmography[
+    movie.director.notableFilmography.length - 1
+  ];
+};
 
 /**
  * Gets description of Gandalf
  * @returns the description of Gandalf
  */
-export const getDescriptionOfGandalf = () => {};
+export const getDescriptionOfGandalf = () => {
+  //return movie.characters[1].description;
+  return movie.characters.find((character) => character.name === "Gandalf")
+    .description;
+};
 
 /**
  * Gets the numbers of characters
  * @returns the numbers of characters
  */
-export const getNumbersOfCharacters = () => {};
+export const getNumbersOfCharacters = () => {
+  return movie.characters.length;
+};
 
 /**
  * Gets real name of Aragorn
  * @returns real name of Aragorn
  */
-export const getRealOfAragorn = () => {};
+export const getRealOfAragorn = () => {
+  //return movie.characters[2].actor;
+  return movie.characters.find((character) => character.name === "Aragorn")
+    .actor;
+};
 
 /**
  * Gets all keys of movie object
  * @returns all keys of movie objec
  */
-export const getMovieKeys = () => {};
+export const getMovieKeys = () => {
+  return Object.keys(movie);
+};
 
 /**
  * Gets the infex of Fantasia value
  * @returns the infex of Fantasia value
  */
-export const getIndexOfFantasaiValue = () => {};
+export const getIndexOfFantasaiValue = () => {
+  return Object.values(movie).indexOf(movie.genre);
+};
