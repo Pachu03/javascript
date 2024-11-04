@@ -1,21 +1,21 @@
 export class Book {
-    title;
-    author;
+    #title;
+    #author;
     published;
   
     constructor(title, author, published) {
-      this.title = title;
-      this.author = author;
+      this.#title = title;
+      this.#author = author;
       this.published = published;
     }
   
     // Getters
     get title() {
-      return this.title;
+      return this.#title;
     }
   
     get author() {
-      return this.author;
+      return this.#author;
     }
   
     get published() {
