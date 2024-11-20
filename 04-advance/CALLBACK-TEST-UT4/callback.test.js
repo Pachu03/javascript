@@ -15,4 +15,8 @@ describe("callback", () => {
     const result = callback.concatTask(taskList, callback.concatList);
     expect(result).toBe("My task list: study buy sleep play");
   });
+  it("should double the items with a delay of 6 seconds",()=>{
+    const result = callback.doubleArray(numbers1, callback.doubleElementArray);
+    expect(result).toBe([1, 4, 6, 8, 10]);
+  });
 });
