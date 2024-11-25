@@ -29,14 +29,12 @@ export function concatList(listString) {
 }
 
 export function doubleArray(array, callback) {
-  return callback(array);
+  callback(array); 
 }
 
-export function doubleElementArray(array) {
-  return setTimeout(() => {
-    let newArray = [];
-    array.forEach((element) => {
-      newArray.push(element * element);
-    });
+export function doubleElementArray(array, doneCallback) {
+  setTimeout(() => {
+    const newArray = array.map((element) => element * 2); 
+    doneCallback(newArray); 
   }, 6000);
 }
